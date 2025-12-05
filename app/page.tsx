@@ -94,10 +94,10 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen py-8 px-4 sm:px-6 lg:px-8 relative z-10 pt-16">
+    <main className="min-h-screen pt-8 pb-8 px-4 sm:px-6 lg:px-8 relative z-10 lg:pt-16">
       <div className="max-w-7xl mx-auto">
         <header className="text-center mb-8">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-4">
+          <h1 className="text-3xl sm:text-5xl font-bold text-gray-800 mb-4">
             Organização Virada de Ano 2026 🎇
           </h1>
           <p className="text-amber-600 text-md sm:text-xl font-medium mb-2">

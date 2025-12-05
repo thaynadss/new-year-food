@@ -48,7 +48,7 @@ export default function PostItCard({ person, onUpdate }: PostItCardProps) {
 
   return (
     <div
-      className={`${bgColor} p-5 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-200 relative min-h-[280px] flex flex-col`}
+      className={`${bgColor} p-5 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-200 relative flex flex-col`}
       style={{
         transform: `rotate(${Math.random() * 4 - 2}deg)`,
         boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
@@ -64,24 +64,24 @@ export default function PostItCard({ person, onUpdate }: PostItCardProps) {
       </h3>
 
       {!isEditing ? (
-        <div className="flex-1 space-y-3 text-gray-700">
-          <div>
+        <div className="flex flex-col flex-1 md:space-y-3 text-gray-700">
+          <div className="flex md:flex-col items-center md:items-start gap-1">
             <strong className="text-sm uppercase tracking-wide">
               🍽️ Comida:
             </strong>
-            <p className="mt-1 break-words">{person.food || "-"}</p>
+            <p className="break-words">{person.food || "-"}</p>
           </div>
-          <div>
+          <div className="flex md:flex-col items-center md:items-start gap-1">
             <strong className="text-sm uppercase tracking-wide">
               🥤 Bebida:
             </strong>
-            <p className="mt-1 break-words">{person.drink || "-"}</p>
+            <p className="break-words">{person.drink || "-"}</p>
           </div>
-          <div>
+          <div className="flex md:flex-col items-center md:items-start gap-1">
             <strong className="text-sm uppercase tracking-wide">
               🍰 Sobremesa:
             </strong>
-            <p className="mt-1 break-words">{person.dessert || "-"}</p>
+            <p className="break-words">{person.dessert || "-"}</p>
           </div>
           <button
             onClick={() => setIsEditing(true)}
