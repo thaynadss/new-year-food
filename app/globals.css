@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f5f5dc;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    /* Fogos de artifício - grandes */
+    radial-gradient(circle at 15% 20%, transparent 0%, transparent 1%, #d4af37 1%, transparent 1.2%),
+    radial-gradient(circle at 15% 20%, transparent 0%, transparent 2%, #d4af37 2%, transparent 2.5%),
+    radial-gradient(circle at 15% 20%, transparent 0%, transparent 3%, #d4af37 3%, transparent 3.5%),
+    
+    radial-gradient(circle at 85% 25%, transparent 0%, transparent 1%, #d4af37 1%, transparent 1.2%),
+    radial-gradient(circle at 85% 25%, transparent 0%, transparent 2%, #d4af37 2%, transparent 2.5%),
+    radial-gradient(circle at 85% 25%, transparent 0%, transparent 3%, #d4af37 3%, transparent 3.5%),
+    
+    radial-gradient(circle at 50% 15%, transparent 0%, transparent 1%, #d4af37 1%, transparent 1.2%),
+    radial-gradient(circle at 50% 15%, transparent 0%, transparent 2%, #d4af37 2%, transparent 2.5%),
+    radial-gradient(circle at 50% 15%, transparent 0%, transparent 3%, #d4af37 3%, transparent 3.5%),
+    
+    radial-gradient(circle at 70% 30%, transparent 0%, transparent 1%, #c9a961 1%, transparent 1.2%),
+    radial-gradient(circle at 70% 30%, transparent 0%, transparent 1.5%, #c9a961 1.5%, transparent 2%),
+    
+    radial-gradient(circle at 30% 28%, transparent 0%, transparent 0.8%, #c9a961 0.8%, transparent 1%),
+    radial-gradient(circle at 30% 28%, transparent 0%, transparent 1.2%, #c9a961 1.2%, transparent 1.5%);
+  
+  background-size: 
+    100% 100%, 100% 100%, 100% 100%,
+    100% 100%, 100% 100%, 100% 100%,
+    100% 100%, 100% 100%, 100% 100%,
+    100% 100%, 100% 100%,
+    100% 100%, 100% 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.15;
+}
+
+/* Linhas dos fogos */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    /* Fogos no canto esquerdo superior */
+    linear-gradient(125deg, transparent 15%, #d4af37 15%, #d4af37 15.2%, transparent 15.2%),
+    linear-gradient(135deg, transparent 15%, #d4af37 15%, #d4af37 15.2%, transparent 15.2%),
+    linear-gradient(145deg, transparent 15%, #d4af37 15%, #d4af37 15.2%, transparent 15.2%),
+    linear-gradient(115deg, transparent 15%, #d4af37 15%, #d4af37 15.2%, transparent 15.2%),
+    
+    /* Fogos no canto direito superior */
+    linear-gradient(45deg, transparent 85%, #d4af37 85%, #d4af37 85.2%, transparent 85.2%),
+    linear-gradient(55deg, transparent 85%, #d4af37 85%, #d4af37 85.2%, transparent 85.2%),
+    linear-gradient(35deg, transparent 85%, #d4af37 85%, #d4af37 85.2%, transparent 85.2%),
+    linear-gradient(65deg, transparent 85%, #d4af37 85%, #d4af37 85.2%, transparent 85.2%),
+    
+    /* Fogos no meio */
+    linear-gradient(80deg, transparent 50%, #d4af37 50%, #d4af37 50.2%, transparent 50.2%),
+    linear-gradient(90deg, transparent 50%, #d4af37 50%, #d4af37 50.2%, transparent 50.2%),
+    linear-gradient(100deg, transparent 50%, #d4af37 50%, #d4af37 50.2%, transparent 50.2%),
+    
+    /* Fogos menores */
+    linear-gradient(70deg, transparent 70%, #c9a961 70%, #c9a961 70.15%, transparent 70.15%),
+    linear-gradient(110deg, transparent 30%, #c9a961 30%, #c9a961 30.15%, transparent 30.15%);
+  
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.12;
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 0.15; }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.3s ease-out;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
