@@ -37,14 +37,14 @@ export default function AddPersonForm({ onAdd, onCancel }: AddPersonFormProps) {
   return (
     <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-xl">
       <h3 className="text-xl font-bold text-gray-800 mb-4">
-        Adicionar Nova Pessoa
+        Adicionar nova pessoa ou família
       </h3>
       <div className="mb-4">
         <label
           htmlFor="name"
-          className="block text-sm font-semibold text-gray-700 mb-2"
+          className="block text-sm font-semibold text-gray-700 mb-2 text-start text-start"
         >
-          Nome completo:
+          Nome:
         </label>
         <input
           type="text"
@@ -60,7 +60,7 @@ export default function AddPersonForm({ onAdd, onCancel }: AddPersonFormProps) {
       <div className="mb-4">
         <label
           htmlFor="food"
-          className="block text-sm font-semibold text-gray-700 mb-2"
+          className="block text-sm font-semibold text-gray-700 mb-2 text-start"
         >
           🍽️ Comida:
         </label>
@@ -76,7 +76,7 @@ export default function AddPersonForm({ onAdd, onCancel }: AddPersonFormProps) {
       <div className="mb-4">
         <label
           htmlFor="drink"
-          className="block text-sm font-semibold text-gray-700 mb-2"
+          className="block text-sm font-semibold text-gray-700 mb-2 text-start"
         >
           🥤 Bebida:
         </label>
@@ -92,7 +92,7 @@ export default function AddPersonForm({ onAdd, onCancel }: AddPersonFormProps) {
       <div className="mb-4">
         <label
           htmlFor="dessert"
-          className="block text-sm font-semibold text-gray-700 mb-2"
+          className="block text-sm font-semibold text-gray-700 mb-2 text-start"
         >
           🍰 Sobremesa:
         </label>

@@ -104,19 +104,20 @@ export default function Home() {
             ✨ Vamos celebrar mais um ano que o Senhor nos concedeu com muita
             alegria! ✨
           </p>
-          <p className="text-gray-600 text-base sm:text-lg mb-6">
-            Se você puder levar uma comida, bebida ou sobremesa, por favor,
-            adicione seu nome à lista abaixo
+          <p className="text-gray-600 text-justify sm:text-lg mb-6">
+            Informe o que você e sua família irão contribuir para a nossa ceia
+            de Ano Novo. Assim, evitamos duplicidade e garantimos variedade para
+            todos aproveitarem! 🎉
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-2xl mx-auto">
-            <input
+            {/* <input
               type="text"
               placeholder="Buscar por nome..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full sm:flex-1 px-4 py-3 rounded-lg shadow-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-            />
+            /> */}
             <button
               onClick={() => setShowAddForm(!showAddForm)}
               className="w-full sm:w-auto px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg shadow-lg transition-colors focus:outline-none focus:ring-2 focus:ring-green-400"
